@@ -1,0 +1,44 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #4d0000, #000);
+  color: #fff;
+  text-align: center;
+}
+
+.hero {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #ff0000, #800000);
+  color: #ffd700;
+}
+
+.tagline {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.btn {
+  background: #ffd700;
+  color: #800000;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.items div {
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  display: inline-block;
+  width: 150px;
+  font-size: 1.1em;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #222;
+  font-size: 1em;
+}
