@@ -1,23 +1,17 @@
-import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
-
+const express = require("express");
+const path = require("path");
 const app = express();
-const port = process.env.PORT || 3000;
 
-// File path setup
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const PORT = process.env.PORT || 3000;
 
-// Serve static files (like CSS, JS, images)
-app.use(express.static(__dirname));
+// Serve all static files (CSS, JS, images) from 'public' folder
+app.use(express.static(path.join(__dirname, "public")));
 
-// Serve main HTML
+// Route for home page
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// Start server
-app.listen(port, () => {
-  console.log(`✅ Server running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });
