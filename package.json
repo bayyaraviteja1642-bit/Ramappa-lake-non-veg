@@ -1,7 +1,9 @@
 {
   "name": "ramappa-lake-non-veg",
   "version": "1.0.0",
+  "description": "Ramappa Lake Non-Veg Pickles website",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server.js"
   },
