@@ -1,44 +1,66 @@
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(to bottom, #4d0000, #000);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #400000, #800000);
   color: #fff;
   text-align: center;
 }
 
-.hero {
-  padding: 60px 20px;
-  background: linear-gradient(180deg, #ff0000, #800000);
-  color: #ffd700;
+header {
+  background: url('https://i.ibb.co/SK2VPLH/bg-chicken.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .tagline {
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ffd700;
+  margin-bottom: 20px;
 }
 
 .btn {
   background: #ffd700;
-  color: #800000;
-  padding: 10px 20px;
-  border-radius: 10px;
-  text-decoration: none;
+  color: #400000;
+  padding: 12px 25px;
+  border-radius: 8px;
   font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #800000;
+}
+
+section {
+  padding: 50px 20px;
+  background: #fff;
+  color: #222;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: -30px;
 }
 
 .items div {
   margin: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 15px;
   display: inline-block;
-  width: 150px;
-  font-size: 1.1em;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #800000;
 }
 
 footer {
-  margin-top: 40px;
-  padding: 20px;
   background: #222;
-  font-size: 1em;
+  color: #ffd700;
+  padding: 20px;
+  font-size: 1rem;
+  margin-top: 30px;
 }
