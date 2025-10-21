@@ -1,11 +1,8 @@
-// public/main.js
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("🍗 Ramappa Lake Non-Veg Pickles website loaded successfully!");
-  
-  const learnMoreBtn = document.querySelector(".btn");
-  if (learnMoreBtn) {
-    learnMoreBtn.addEventListener("click", () => {
-      alert("Authentic Non-Veg Pickles made with ❤️ at Ramappa Lake!");
-    });
-  }
+  const title = document.querySelector("h1");
+  title.style.opacity = 0;
+  title.style.transition = "opacity 2s";
+  setTimeout(() => {
+    title.style.opacity = 1;
+  }, 300);
 });
