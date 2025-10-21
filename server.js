@@ -1,20 +1,23 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-// Serve all files from "public" folder
-app.use(express.static(path.join(__dirname, "public")));
+// File path setup
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// API endpoint
-app.get("/api/info", (req, res) => {
-  res.json({ message: "Welcome to Ramappa Lake Non-Veg App", status: "Running fine ✅" });
+// Serve static files (like CSS, JS, images)
+app.use(express.static(__dirname));
+
+// Serve main HTML
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// Catch-all route for index.html
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+// Start server
+app.listen(port, () => {
+  console.log(`✅ Server running on http://localhost:${port}`);
 });
-
-// Start the server
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
